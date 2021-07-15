@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>🦠 Portal Informasi Covid-19</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap4-neon-glow.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css'>
+		<style type="text/css">
+			.divider {
+				margin-top: 30px;
+				margin-bottom: 20px;
+			}
+			.dividerberita {
+				margin-top: 10px;
+			}
+		</style>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.1/chart.js"></script>
+  </head>
+  <body>
+    <div class="navbar-dark text-white">
+        <div class="container">
+					<nav class="navbar px-0 navbar-expand-lg navbar-dark">
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+							<div class="navbar-nav">
+									<a href="#" class="pl-md-0 p-3 text-decoration-none text-light">Home</a>
+									<a href="#tentang" class="p-3 text-decoration-none text-light">Tentang</a>
+									<a href="#mencegah" class="p-3 text-decoration-none text-light">Cara Mencegah</a>
+									<a href="#jumlah_kasus" class="p-3 text-decoration-none text-light">Jumlah Kasus</a>
+									<a href="#berita" class="p-3 text-decoration-none text-light">Artikel Terbaru</a>
+							</div>
+							</div>
+					</nav>
+        </div>
+    </div>
+		<div class="jumbotron bg-transparent mb-0 radius-0">
+			<div class="container">
+					<div class="row">
+						<div class="col-md-6 tr">
+								<h1 class="display-1" style="margin-top:15px;" id="title_name">🦠Covid-<span class="vim-caret" style="color:green;">19</span></h1>
+								<slogan class="lead mb-3 text-mono text-success" style="margin-left:105px;"></slogan>
+						</div>
+						<div class="col-md-6 tr">
+								<div class="text-mono" id="kasus">
+										<p class="text">Kasus di Indonesia : </p>
+										<div class="row">
+												<div class="col-md-6 tr">
+														<a href="#!"
+														title="Kasus Sembuh"
+														class="btn btn-success btn-shadow px-3 my-2 ml-0 text-left form-control">
+														😄 Sembuh  : <stat id="sembuh"></stat>
+														</a>
+												</div>
+												<div class="col-md-6 tr">
+														<a href="#!"
+														title="Kasus Positif"
+														class="btn btn-danger btn-shadow px-3 my-2 ml-0 text-left form-control">
+														😩 Positif : <stat id="positif"></stat>
+														</a>
+												</div>
+												<div class="col-md-6">
+														<a href="#!"
+														title="Dalam Perawatan"
+														class="btn btn-warning btn-shadow px-3 my-2 ml-0 text-left form-control">
+														🤒 Dirawat  : <stat id="dirawat"></stat>
+														</a>
+												</div>
+												<div class="col-md-6">
+														<a href="#!"
+														title="Meninggal"
+														class="btn btn-info btn-shadow px-3 my-2 ml-0 text-left form-control">
+														😇 Meninggal : <stat id="meninggal"></stat>
+														</a>
+												</div>
+										</div>
+								</div>
+						</div>
+					</div>
+			</div>
+		</div>
+
+		<div class="container mb-0 radius-0" id="content">
+			<section id="tentang">
+				<div class="row">
+					<div class="col-md-12">
+						<h4 class="text-mono">ℹ️ Tentang Virus Covid-19</h4>
+					</div>
+					<div class="col-md-12">
+						<p class="text-muted text-mono">COVID-19 adalah penyakit yang disebabkan oleh virus severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). COVID-19 dapat menyebabkan gangguan sistem pernapasan, mulai dari gejala yang ringan seperti flu, hingga infeksi paru-paru, seperti pneumonia.</p>
+					</div>
+				</div>
+			</section>
+			<!-- <div class="divider"></div> -->
+			<!-- <div class="divider"></div> -->
+			<section id="mencegah" class="divider">
+				<div class="row">
+					<div class="col-md-12">
+						<h4 class="text-mono">✔️ Cara Mencegah Virus Covid-19 </h4>
+					</div>
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-4 divider text-center">
+								<div class="row">
+									<div class="col-md-12">
+										<img src="./images/cuci-tangan.png" alt="Mencuci Tangan" class="img-fluid rounded" width="200px" height="200px">
+									</div>
+									<div class="col-md-12">
+										<h5 class="text-mono dividerberita">Mencuci Tangan</h5>
+										<p class="text-mono text-muted">Mencuci Tangan dengan bersih</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 divider text-center">
+								<div class="row">
+									<div class="col-md-12">
+										<img src="./images/hindari-kontak.png" alt="Hindari Kontak Langsung" class="img-fluid rounded" width="200px" height="200px">
+									</div>
+									<div class="col-md-12">
+										<h5 class="text-mono dividerberita">Hindari Kontak Langsung</h5>
+										<p class="text-mono text-muted">Hindari kontak secara langsung dengan orang lain</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 divider text-center">
+								<div class="row">
+									<div class="col-md-12">
+										<img src="./images/pakai-masker.png" alt="Memakai Masker" class="img-fluid rounded" width="200px" height="200px">
+									</div>
+									<div class="col-md-12">
+										<h5 class="text-mono dividerberita">Memakai Masker</h5>
+										<p class="text-mono text-muted">Memakai masker medis yang direkomendasikan pemerintah</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="jumlah_kasus">
+				<div class="row">
+					<div class="col-md-12">
+						<h4 class="text-mono">📊 Jumlah Kasus Covid-19 Di Beberapa Negara</h4>
+					</div>
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-12 dividerberita">
+								<select id="pilih_negara" class="form-control">
+									
+								</select>
+							</div>
+							<div class="col-md-12" style="margin-bottom: 20px;">
+								<canvas id="myChart" class="dividerberita" height="100px"></canvas>
+							</div>
+							<div class="col-md-12">
+								<p class="text-muted text-mono">Data Terakhir di Update: <span id="last_update"></span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="berita" class="divider">
+				<div class="row">
+					<div class="col-md-12">
+						<h4 class="text-mono">📰 Artikel Mengenai Covid-19</h4>
+					</div>
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-12" style="height:350px; overflow: auto;" id="list_berita">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer class="text-muted" style="margin-top:50px; margin-bottom: 20px;">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>&copy; Team Corona 2021</p>
+      </div>
+    </footer>
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="js/script.js"></script>
+		<script type="text/javascript">
+			var options = {
+				strings: ['', 'Stay at Home.', 'Keep Healthy.', 'Ayo Pakai Masker!'],
+				typeSpeed: 15,
+				backSpeed: 15,
+				cursorChar: '_',
+				smartBackspace: false,
+				loop: true
+			};
+			var typed = new Typed('slogan', options);
+		</script>
+		<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
